@@ -34,7 +34,7 @@ Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 ````
 TELEGRAM_TOKEN=seu_token_do_bot
 CHAT_ID=seu_chat_id
-PRODUCT_URL=https://www.exemplo.com/produto
+PRODUCT_URL=https://www.amazon.com.br/produto
 ````
 TELEGRAM_TOKEN: token do seu bot do Telegram (criado com o @BotFather
 ).
