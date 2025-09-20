@@ -1,6 +1,6 @@
 # 🔎 Rastreador de Preços com Notificação no Telegram
 
-Este projeto é um **script em Python** que monitora o preço de um produto em uma página da web (ex.: Amazon) e envia notificações via **Telegram** quando o valor sobe ou cai.  
+Este projeto é um **script em Python** que monitora o preço de um produto da Amazon e envia notificações via **Telegram** quando o valor sobe ou cai.  
 Além disso, ele mantém um histórico dos preços em um arquivo local.
 
 ---
