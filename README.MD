@@ -74,7 +74,7 @@ Registra o preço em ultimo_preco.txt
 
 ## ⚠️ Observações
 + A função scrape_price() está configurada para buscar By.CLASS_NAME
-Atualmente, o script só funciona em páginas da Amazon Brasil:
++ Atualmente, o script só funciona em páginas da Amazon Brasil:
 
 ````
 By.CLASS_NAME
