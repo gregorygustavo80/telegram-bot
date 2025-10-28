@@ -73,11 +73,11 @@ Registra o preço em ultimo_preco.txt
 ````
 
 ## ⚠️ Observações
-+ O seletor CSS do preço pode variar dependendo do site.
-Atualmente, o script está configurado para páginas da Amazon Brasil:
++ A função scrape_price() está configurada para buscar By.CLASS_NAME
+Atualmente, o script só funciona em páginas da Amazon Brasil:
 
 ````
-span.a-size-base.a-color-price.a-color-price
+By.CLASS_NAME
 ````
 + Se usar outro site, ajuste o seletor em scrape_price()
 + Evite rodar o script com frequência muito alta para não ser bloqueado pelo site.

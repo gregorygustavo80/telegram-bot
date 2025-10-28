@@ -85,7 +85,7 @@ def scrape_price(url):
         price_fraction = price_fraction.strip()
 
         price_text = f"{price_whole}.{price_fraction}"
-        print("Preço bruto (whole+fraction):", repr(price_text))  # debug
+        print("Preço bruto (whole+fraction):", repr(price_text))  
 
         return Decimal(price_text).quantize(Decimal("0.01"))
 
