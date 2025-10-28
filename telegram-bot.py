@@ -70,11 +70,25 @@ def scrape_price(url):
     driver.get(url)
 
     try:
-        price_element = WebDriverWait(driver, 15).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "span.a-size-base.a-color-price.a-color-price"))
-        )
-        price_text = price_element.text.replace("R$", "").replace(",", ".").strip()
+        # Parte inteira
+        price_whole = WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "a-price-whole"))
+        ).text
+
+        # Parte decimal (centavos)
+        price_fraction = WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "a-price-fraction"))
+        ).text
+
+        # Limpeza
+        price_whole = price_whole.replace(".", "").replace("\xa0", "").strip()
+        price_fraction = price_fraction.strip()
+
+        price_text = f"{price_whole}.{price_fraction}"
+        print("Preço bruto (whole+fraction):", repr(price_text))  # debug
+
         return Decimal(price_text).quantize(Decimal("0.01"))
+
     except Exception as e:
         print("Erro ao buscar preço:", e)
         return None
